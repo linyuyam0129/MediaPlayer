@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MediaPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="影音播放程式" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF5F4D08" Offset="0.014"/>
+                <GradientStop Color="#FFE2BB27" Offset="1"/>
+                <GradientStop Color="#FFE6BF26" Offset="0.594"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <MediaElement x:Name="MedShow" Height="324" Margin="58,41,58,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnPlay" Content="播放" HorizontalAlignment="Left" Margin="58,377,0,0" VerticalAlignment="Top" Width="119" Height="30" Background="#FF27E016"/>
+        <Button x:Name="btnPause" Content="暫停" HorizontalAlignment="Left" Margin="182,377,0,0" VerticalAlignment="Top" Width="119" Height="30" Background="Red"/>
+        <Button x:Name="btnStop" Content="停止" HorizontalAlignment="Left" Margin="306,377,0,0" VerticalAlignment="Top" Width="120" Height="30">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFFF15BE" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnExit" Content="離開" HorizontalAlignment="Left" Margin="431,377,0,0" VerticalAlignment="Top" Width="119" Height="30"/>
+        <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Margin="61,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="399"/>
+        <Button x:Name="btnOpenFile" Content="開啟檔案" HorizontalAlignment="Left" Margin="465,15,0,0" VerticalAlignment="Top" Width="85" Height="18"/>
+
     </Grid>
 </Window>
